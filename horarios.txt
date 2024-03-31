@@ -1,0 +1,16 @@
+29/03
+14h ate 17h - implementacao Web Api
+18h ate 20:00h - implementacao front end
+22h ate 23:30h - resolvendo (How to solve 'Redirect has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header'?)
+
+
+30/03
+
+17:30 ate 20h paginas de cadastrar e editar
+21:30 ate 23h pagina de detalhes e exclusao
+
+31/03 
+10h ate 13h estilizacao das paginas
+16h ate 18 implementar mask no campo Preco(Nao consegui)
+
+
