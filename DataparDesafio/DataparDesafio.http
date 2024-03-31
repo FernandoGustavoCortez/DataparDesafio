@@ -1,0 +1,6 @@
+@DataparDesafio_HostAddress = http://localhost:5101
+
+GET {{DataparDesafio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

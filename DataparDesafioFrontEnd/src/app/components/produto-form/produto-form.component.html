@@ -1,0 +1,76 @@
+<mat-card>
+  <h1>{{ btnTitle }}</h1>
+
+  <form [formGroup]="produtoForm" (ngSubmit)="submit()" #formDit="ngForm">
+    <input type="hidden" formControlName="id" />
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Nome:</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="nome"
+          placeholder="Insira o nome!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">descricao:</mat-label>
+        <textarea
+          matInput
+          formControlName="descricao"
+          placeholder="Insira a descricao!"
+          required
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">Preco:</mat-label>
+        <span matTextPrefix>R$ &nbsp;</span>
+        <input
+          matInput
+          type="text"
+          formControlName="preco"
+          placeholder="Insira o preco!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">Quantidade em Estoque:</mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="quantidade"
+          placeholder="Insira a Quantidade!"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="btn-box">
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit"
+        [disabled]="!produtoForm.valid"
+      >
+        {{ btnAcao }}
+      </button>
+      <button
+        mat-raised-button
+        routerLink="/"
+        routerLinkActive="router-link-active"
+      >
+        Voltar
+      </button>
+    </div>
+  </form>
+</mat-card>

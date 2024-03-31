@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Deseja confirmar a exclusao?</h2>
+@if (produto) {
+<mat-dialog-content>
+  <p><span style="font-weight: bold">Nome: </span>{{ produto.nome }}</p>
+  <p style="font-weight: bold">Descricao:</p>
+  <p>{{ produto.descricao }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close cdkFocusInitial>Cancelar</button>
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="excluirProduto()"
+    mat-dialog-close
+  >
+    Excluir!
+  </button>
+</mat-dialog-actions>
+} @else {
+<mat-dialog-content>
+  <p>Produto nao encontrado!</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Voltar</button>
+</mat-dialog-actions>
+}
